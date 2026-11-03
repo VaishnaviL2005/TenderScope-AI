@@ -1,0 +1,6 @@
+Tender Title: Neon Connectivity Demonstration
+Reference No: NEON-SMOKE-001
+Product Category: Cable
+11 kV Aluminium 3 cores 240 mm2 XLPE Steel Wire
+Quantity: 100 metre
+Testing required: Conductor Resistance Test

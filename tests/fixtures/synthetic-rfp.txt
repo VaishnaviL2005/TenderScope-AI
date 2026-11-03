@@ -1,0 +1,6 @@
+Tender Title: Synthetic Cable Requirement
+Tender Reference: RFP-SYN-001
+Product Category: Cable
+Supply 11 kV Aluminium cable, 3 cores, 240 mm2, XLPE insulation and Steel Wire armour.
+Quantity: 100 metre
+Testing required: Conductor Resistance Test

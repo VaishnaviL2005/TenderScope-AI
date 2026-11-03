@@ -1,0 +1,9 @@
+Synthetic OEM Datasheet
+Product ID: SYN-11-240-AL
+Product name: Synthetic 11kV Aluminium XLPE Cable
+Rated voltage: 11 kV
+Conductor: Aluminium
+Construction: 3 cores, 240 mm2
+Insulation: XLPE
+Armour: Steel Wire
+Applicable standard: IS 7098

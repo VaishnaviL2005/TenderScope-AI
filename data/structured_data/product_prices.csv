@@ -1,0 +1,6 @@
+sku_id,product_name,unit_price,price_unit,currency,price_basis,is_synthetic
+AG-11-240-AL-STA,Synthetic 11 kV 3C x 240 mm² Aluminium XLPE Cable,485,metre,INR,per_metre,true
+AG-11-240-AL-SWA,Synthetic 11 kV 3C x 240 mm² Aluminium XLPE Steel Wire Armoured Cable,470,metre,INR,per_metre,true
+AG-11-300-AL-STA,Synthetic 11 kV 3C x 300 mm² Aluminium XLPE Cable with PE Sheath,520,metre,INR,per_metre,true
+AG-33-240-CU-STA,Synthetic 33 kV 3C x 240 mm² Copper XLPE Cable,640,metre,INR,per_metre,true
+AG-6K6-240-AL-UA,Synthetic 6.6 kV 1C x 240 mm² Aluminium XLPE Unarmoured Cable,315,metre,INR,per_metre,true

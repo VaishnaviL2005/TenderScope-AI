@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+data/uploads/*
+data/faiss_index/*
+data/*.db
+!data/uploads/.gitkeep
+!data/faiss_index/.gitkeep
+.neon
+node_modules/

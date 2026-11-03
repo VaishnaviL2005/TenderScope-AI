@@ -1,0 +1,5 @@
+test_id,test_name,price,charge_unit,currency,is_synthetic
+TEST-001,Conductor DC resistance test,4000,per_tender_lot,INR,true
+TEST-002,Insulation resistance test,2500,per_tender_lot,INR,true
+TEST-003,High-voltage withstand test,7500,per_tender_lot,INR,true
+TEST-004,Partial discharge test,12000,per_tender_lot,INR,true

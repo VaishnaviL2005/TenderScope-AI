@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 text-slate-800 antialiased;
+}
+
+@media print {
+  body { background: #ffffff; }
+  .print-break { break-inside: avoid; }
+}
+@page { margin: 14mm; }

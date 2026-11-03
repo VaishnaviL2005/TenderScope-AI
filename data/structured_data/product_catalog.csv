@@ -1,0 +1,6 @@
+sku_id,product_name,manufacturer,voltage_kv,conductor_material,cores,cross_section_mm2,insulation,armour_type,sheath_material,standard,datasheet_ref,is_synthetic
+AG-11-240-AL-STA,Synthetic 11 kV 3C x 240 mm² Aluminium XLPE Cable,AsterGrid Cable Systems (Fictional),11,Aluminium,3,240,XLPE,Galvanized steel strip armour,PVC ST2,IEC 60502-2,"AGCS-DS-001, page 2",true
+AG-11-240-AL-SWA,Synthetic 11 kV 3C x 240 mm² Aluminium XLPE Steel Wire Armoured Cable,AsterGrid Cable Systems (Fictional),11,Aluminium,3,240,XLPE,Galvanized steel wire armour,PVC ST2,IEC 60502-2,"AGCS-DS-002, page 3",true
+AG-11-300-AL-STA,Synthetic 11 kV 3C x 300 mm² Aluminium XLPE Cable with PE Sheath,AsterGrid Cable Systems (Fictional),11,Aluminium,3,300,XLPE,Galvanized steel strip armour,PE,IEC 60502-2,"AGCS-DS-003, page 4",true
+AG-33-240-CU-STA,Synthetic 33 kV 3C x 240 mm² Copper XLPE Cable,AsterGrid Cable Systems (Fictional),33,Copper,3,240,XLPE,Galvanized steel strip armour,PVC ST2,IEC 60840,"AGCS-DS-004, page 5",true
+AG-6K6-240-AL-UA,Synthetic 6.6 kV 1C x 240 mm² Aluminium XLPE Unarmoured Cable,AsterGrid Cable Systems (Fictional),6.6,Aluminium,1,240,XLPE,Unarmoured,PVC ST2,IS 7098-1,"AGCS-DS-005, page 6",true
