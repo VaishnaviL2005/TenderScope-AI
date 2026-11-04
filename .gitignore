@@ -8,3 +8,8 @@ data/*.db
 !data/faiss_index/.gitkeep
 .neon
 node_modules/
+.venv/
+Frontend/node_modules/
+dist/
+Frontend/dist/
+*.pyc
