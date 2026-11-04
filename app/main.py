@@ -112,7 +112,7 @@ def test_prices():return ok("Testing prices retrieved",db_testing_prices())
 
 if FRONTEND_DIST.exists():
 
-    # Serve React static assets (JS, CSS, images)
+    # Serve React static assets
     if (FRONTEND_DIST / "assets").is_dir():
         app.mount(
             "/assets",
@@ -123,6 +123,10 @@ if FRONTEND_DIST.exists():
     # Serve React pages and handle frontend routes
     @app.get("/{full_path:path}", include_in_schema=False)
     async def serve_frontend(full_path: str):
+
+        # Unknown API endpoints should return 404, not React HTML
+        if full_path == "api" or full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="API endpoint not found")
 
         candidate = (FRONTEND_DIST / full_path).resolve()
 
