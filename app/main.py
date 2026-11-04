@@ -11,10 +11,14 @@ from app.services import save_and_extract,ingest_datasheet
 from app.rag import rebuild as rebuild_rag, status as kb_status
 from app.workflow import analyze,answer_question
 from app.storage import status as storage_status
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 @asynccontextmanager
 async def lifespan(app): init_db(); yield
 app=FastAPI(title="TenderScope AI",version="1.0.0",description="Tender analysis backend. Fixture prices are synthetic.",lifespan=lifespan)
+FRONTEND_DIST = Path(__file__).resolve().parent.parent / "Frontend" / "dist"
 app.add_middleware(CORSMiddleware,allow_origins=settings.cors_origins.split(","),allow_methods=["*"],allow_headers=["*"])
 @app.exception_handler(HTTPException)
 async def http_error(_:Request,exc:HTTPException): return JSONResponse(status_code=exc.status_code,content={"success":False,"message":"Unable to process the request","data":{"error_code":"HTTP_ERROR","details":str(exc.detail)}})
@@ -101,3 +105,31 @@ def knowledge_status():return ok("Knowledge-base status",kb_status())
 def product_prices():return ok("Product prices retrieved",db_product_prices())
 @app.get("/api/v1/pricing/tests",response_model=ApiResponse,tags=["Pricing"])
 def test_prices():return ok("Testing prices retrieved",db_testing_prices())
+
+# ==========================================
+# Serve React Frontend
+# ==========================================
+
+if FRONTEND_DIST.exists():
+
+    # Serve React static assets (JS, CSS, images)
+    if (FRONTEND_DIST / "assets").is_dir():
+        app.mount(
+            "/assets",
+            StaticFiles(directory=FRONTEND_DIST / "assets"),
+            name="frontend-assets"
+        )
+
+    # Serve React pages and handle frontend routes
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_frontend(full_path: str):
+
+        candidate = (FRONTEND_DIST / full_path).resolve()
+
+        if (
+            candidate.is_relative_to(FRONTEND_DIST.resolve())
+            and candidate.is_file()
+        ):
+            return FileResponse(candidate)
+
+        return FileResponse(FRONTEND_DIST / "index.html")
